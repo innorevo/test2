@@ -32,7 +32,6 @@
         "button3": {
             "prototype": "digit/ui/button.reel",
             "properties": {
-                "element": {"#": "button3"},
                 "enabled": true,
                 "label": "Button in list"
             }
@@ -43,6 +42,9 @@
                 "element": {"#": "button4"},
                 "enabled": true,
                 "label": "Button"
+            },
+            "bindings": {
+                "button": {"<-": "@list:iteration.object"}
             }
         },
         "flow": {
@@ -139,7 +141,6 @@
         "text3": {
             "prototype": "digit/ui/text.reel",
             "properties": {
-                "element": {"#": "text3"},
                 "value": "inside list"
             }
         }
@@ -158,8 +159,6 @@
         </div>
         <button data-montage-id="button2"></button>
         <p data-montage-id="text2"></p>
-        <button data-montage-id="button3"></button>
-        <p data-montage-id="text3"></p>
         <ul data-montage-id="list">
             <li data-montage-id="button4">
                 Item
