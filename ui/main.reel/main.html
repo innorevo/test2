@@ -13,26 +13,12 @@
                 "element": {"#": "main"}
             }
         },
-        "button": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "enabled": true,
-                "label": "Button"
-            }
-        },
         "button2": {
             "prototype": "digit/ui/button.reel",
             "properties": {
                 "element": {"#": "button2"},
                 "enabled": true,
                 "label": "Button outside"
-            }
-        },
-        "button3": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "enabled": true,
-                "label": "Button in list"
             }
         },
         "button4": {
@@ -44,57 +30,6 @@
             },
             "bindings": {
                 "button": {"<-": "@list:iteration.object"}
-            }
-        },
-        "flow": {
-            "prototype": "montage/ui/flow.reel",
-            "properties": {
-                "cameraPosition": [
-                    0,
-                    0,
-                    1500
-                ],
-                "content": [],
-                "contentController": {"@": "rangeController"},
-                "hasElasticScrolling": true,
-                "paths": [
-                    {
-                        "knots": [
-                            {
-                                "knotPosition": [
-                                    -2400,
-                                    0,
-                                    -1
-                                ],
-                                "nextHandlerPosition": [
-                                    -800,
-                                    0,
-                                    -1
-                                ],
-                                "previousDensity": 10,
-                                "nextDensity": 10
-                            },
-                            {
-                                "knotPosition": [
-                                    2400,
-                                    0,
-                                    -1
-                                ],
-                                "previousHandlerPosition": [
-                                    800,
-                                    0,
-                                    -1
-                                ],
-                                "previousDensity": 10,
-                                "nextDensity": 10
-                            }
-                        ],
-                        "headOffset": 0,
-                        "tailOffset": 0,
-                        "units": {}
-                    }
-                ],
-                "stride": "-2"
             }
         },
         "list": {
@@ -112,32 +47,11 @@
                 ]
             }
         },
-        "slider": {
-            "prototype": "digit/ui/slider.reel",
-            "properties": {
-                "axis": "horizontal",
-                "max": 100,
-                "min": 0,
-                "value": 50
-            }
-        },
-        "text": {
-            "prototype": "digit/ui/text.reel",
-            "properties": {
-                "value": "Text"
-            }
-        },
         "text2": {
             "prototype": "digit/ui/text.reel",
             "properties": {
                 "element": {"#": "text2"},
                 "value": "outside"
-            }
-        },
-        "text3": {
-            "prototype": "digit/ui/text.reel",
-            "properties": {
-                "value": "inside list"
             }
         }
     }
