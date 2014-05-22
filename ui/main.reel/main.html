@@ -47,6 +47,8 @@
                     1500
                 ],
                 "content": [],
+                "contentController": {"@": "rangeController"},
+                "hasElasticScrolling": true,
                 "paths": [
                     {
                         "knots": [
@@ -83,13 +85,23 @@
                         "tailOffset": 0,
                         "units": {}
                     }
-                ]
+                ],
+                "stride": "-2"
             }
         },
         "list": {
             "prototype": "digit/ui/list.reel",
             "properties": {
                 "element": {"#": "list"}
+            }
+        },
+        "rangeController": {
+            "prototype": "montage/core/range-controller",
+            "properties": {
+                "content": [
+                    "",
+                    ""
+                ]
             }
         },
         "slider": {
