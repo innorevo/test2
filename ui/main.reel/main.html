@@ -20,13 +20,85 @@
                 "enabled": true,
                 "label": "Button"
             }
+        },
+        "flow": {
+            "prototype": "montage/ui/flow.reel",
+            "properties": {
+                "element": {"#": "flow"},
+                "cameraPosition": [
+                    0,
+                    0,
+                    1500
+                ],
+                "paths": [
+                    {
+                        "knots": [
+                            {
+                                "knotPosition": [
+                                    -2400,
+                                    0,
+                                    -1
+                                ],
+                                "nextHandlerPosition": [
+                                    -800,
+                                    0,
+                                    -1
+                                ],
+                                "previousDensity": 10,
+                                "nextDensity": 10
+                            },
+                            {
+                                "knotPosition": [
+                                    2400,
+                                    0,
+                                    -1
+                                ],
+                                "previousHandlerPosition": [
+                                    800,
+                                    0,
+                                    -1
+                                ],
+                                "previousDensity": 10,
+                                "nextDensity": 10
+                            }
+                        ],
+                        "headOffset": 0,
+                        "tailOffset": 0,
+                        "units": {}
+                    }
+                ]
+            }
+        },
+        "slider": {
+            "prototype": "digit/ui/slider.reel",
+            "properties": {
+                "element": {"#": "slider"},
+                "axis": "horizontal",
+                "max": 100,
+                "min": 0,
+                "value": 50
+            }
+        },
+        "text": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "value": "Text"
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <button data-montage-id="button"></button>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="flow">
+            @button
+            <div>
+                <button data-montage-id="button"></button>
+                <p data-montage-id="text"></p>
+            </div>
+            <div data-montage-id="slider"></div>
+        </div>
     </div>
 </body>
 </html>
